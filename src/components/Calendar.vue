@@ -32,6 +32,9 @@ const events = [
   { id: 3, title: 'Event 3', start: '2024-02-11', end: '2024-02-18' },
   { id: 4, title: 'Event 4', start: '2024-02-05', end: '2024-02-05' },
   { id: 6, title: 'Event 5', start: '2024-02-06', end: '2024-02-07' },
+  { id: 8, title: 'Event 6', start: '2024-02-06', end: '2024-02-07' },
+  { id: 9, title: 'Event 7', start: '2024-02-06', end: '2024-02-07' },
+  { id: 10, title: 'Event 8', start: '2024-02-12', end: '2024-02-13' },
   // Add more events as needed
 ];
 
