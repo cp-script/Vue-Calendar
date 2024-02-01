@@ -2,7 +2,9 @@
   <div class="calendar">
     <div class="header">
       <button @click="goToPreviousMonth">&lt;</button>
-      <VueDatePicker v-model="month" month-picker />
+      <div class="datepicker">
+        <VueDatePicker v-model="month" month-picker />
+      </div>
       <button @click="goToNextMonth">&gt;</button>
     </div>
     <div class="days-of-week">
@@ -140,17 +142,21 @@ const daysInMonth = computed(() => {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
   background-color: #f2f2f2;
 }
 
 .header button {
   background-color: transparent;
-  border: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   color: #666;
+}
+
+.datepicker {
+  display: flex;
 }
 
 .days-of-week {
