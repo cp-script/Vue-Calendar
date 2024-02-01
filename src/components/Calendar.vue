@@ -2,7 +2,9 @@
   <div class="calendar">
     <div class="header">
       <button @click="goToPreviousMonth">&lt;</button>
-      <VueDatePicker v-model="month" month-picker />
+      <div class="datepicker">
+        <VueDatePicker v-model="month" month-picker />
+      </div>
       <button @click="goToNextMonth">&gt;</button>
     </div>
     <div class="days-of-week">
@@ -35,6 +37,11 @@ const events = [
   { id: 8, title: 'Event 6', start: '2024-02-06', end: '2024-02-07' },
   { id: 9, title: 'Event 7', start: '2024-02-06', end: '2024-02-07' },
   { id: 10, title: 'Event 8', start: '2024-02-12', end: '2024-02-13' },
+  { id: 11, title: 'Event 9', start: '2024-02-12', end: '2024-02-13' },
+  { id: 12, title: 'Event 10', start: '2024-02-27', end: '2024-03-03' },
+  { id: 13, title: 'Event 11', start: '2024-03-05', end: '2024-03-09' },
+  { id: 14, title: 'Event 12', start: '2024-03-12', end: '2024-03-13' },
+  { id: 15, title: 'Event 13', start: '2024-03-12', end: '2024-03-13' },
   // Add more events as needed
 ];
 
@@ -140,17 +147,21 @@ const daysInMonth = computed(() => {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
   background-color: #f2f2f2;
 }
 
 .header button {
   background-color: transparent;
-  border: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   color: #666;
+}
+
+.datepicker {
+  display: flex;
 }
 
 .days-of-week {
